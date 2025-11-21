@@ -1,0 +1,202 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Accueil — Boutik{% endblock %}
+
+{% block content %}
+
+<section id="hero-carousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+        
+        <div class="carousel-item active hero-carousel-item hero-slide-pink">
+            <div class="carousel-content container text-center text-md-start">
+                <h1 class="display-2 fw-bolder mb-3 hero-title-pink">Nouvelle Collection Femme</h1>
+                <p class="lead mb-4 fw-light hero-lead">Élégance et style redéfinis pour la saison. Découvrez nos incontournables.</p>
+                <a href="?category=Femme" class="btn btn-primary btn-lg d-inline-flex align-items-center gap-2 shadow-lg btn-pink">
+                    <span>Voir la Mode Femme</span>
+                    <img src="{% static 'images/enfant2.jpg' %}" alt="Enfant" class="btn-icon">
+                </a>
+            </div>
+            <img class="svg-illustration d-none d-md-block" src="{% static 'images/hero1.jpg' %}" alt="Hero 1">
+        </div>
+        
+        <div class="carousel-item hero-carousel-item hero-slide-blue">
+            <div class="carousel-content container text-center text-md-start">
+                <h1 class="display-2 fw-bolder mb-3 hero-title-blue">L'Essentiel pour Homme</h1>
+                <p class="lead mb-4 fw-light hero-lead">Modernité et robustesse : des pièces conçues pour durer.</p>
+                <a href="?category=Homme" class="btn btn-outline-primary btn-lg d-inline-flex align-items-center gap-2 shadow-lg btn-outline-blue">
+                    <span>Découvrir l'Univers Homme</span>
+                    <img src="{% static 'images/acc2.jpg' %}" width="20" height="20" alt="chevron" class="btn-icon">
+                </a>
+            </div>
+            <img class="svg-illustration d-none d-md-block" src="{% static 'images/hero2.jpg' %}" alt="Hero 2">
+        </div>
+
+        <div class="carousel-item hero-carousel-item hero-slide-green">
+            <div class="carousel-content container text-center text-md-start">
+                <h1 class="display-2 fw-bolder mb-3 hero-title-green">La Famille Avant Tout</h1>
+                <p class="lead mb-4 fw-light hero-lead">Des accessoires tendance et des vêtements amusants pour les petits.</p>
+                <a href="?category=Accessoires" class="btn btn-success btn-lg d-inline-flex align-items-center gap-2 shadow-lg btn-green">
+                    <span>Voir les Collections Enfants & Accessoires</span>
+                    <img src="{% static 'images/acc2.jpg' %}" width="20" height="20" alt="chevron" class="btn-icon">
+                </a>
+            </div>
+            <img class="svg-illustration d-none d-md-block" src="{% static 'images/hero3.jpg' %}" alt="Hero 3">
+        </div>
+    </div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+        <img src="{% static 'images/acc3.jpg' %}" width="32" height="32" alt="prev" class="btn-icon">
+        <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <img src="{% static 'images/acc3.jpg' %}" width="32" height="32" alt="next" class="btn-icon">
+        <span class="visually-hidden">Suivant</span>
+    </button>
+</section>
+
+---
+<section id="collections" class="container section-spacing text-center">
+    <h2 class="section-title">Parcourir Nos Univers</h2>
+    <div class="row g-5 justify-content-center">
+        <div class="col-12 col-md-4">
+            <a href="?category=Femme" class="category-block d-flex flex-column align-items-center p-5 rounded-4 shadow-sm h-100 text-decoration-none bg-white">
+                <img src="{% static 'images/femme1.jpg' %}" width="80" height="80" alt="Femme" class="img-fluid mb-2">
+                <h3 class="mt-4 mb-2 h4 text-dark fw-bold">Femme</h3>
+                <p class="mb-3 text-muted">Prêt-à-porter, Robes, Chaussures</p>
+                <span class="btn btn-outline-primary mt-auto d-inline-flex align-items-center gap-2">
+                    Collection
+                    <img src="{% static 'images/acc4.jpg' %}" width="18" height="18" alt="arrow" class="btn-icon">
+                </span>
+            </a>
+        </div>
+        <div class="col-12 col-md-4">
+            <a href="?category=Homme" class="category-block d-flex flex-column align-items-center p-5 rounded-4 shadow-sm h-100 text-decoration-none bg-white">
+                <img src="{% static 'images/homme1.jpg' %}" width="80" height="80" alt="Homme" class="img-fluid mb-2">
+                <h3 class="mt-4 mb-2 h4 text-dark fw-bold">Homme</h3>
+                <p class="mb-3 text-muted">Costumes, Jeans, Vêtements techniques</p>
+                <span class="btn btn-outline-primary mt-auto d-inline-flex align-items-center gap-2">
+                    Collection
+                    <img src="{% static 'images/acc4.jpg' %}" width="18" height="18" alt="arrow" class="btn-icon">
+                </span>
+            </a>
+        </div>
+        <div class="col-12 col-md-4">
+            <a href="?category=Enfant" class="category-block d-flex flex-column align-items-center p-5 rounded-4 shadow-sm h-100 text-decoration-none bg-white">
+                <img src="{% static 'images/enfant1.jpg' %}" width="80" height="80" alt="Enfant" class="img-fluid mb-2">
+                <h3 class="mt-4 mb-2 h4 text-dark fw-bold">Enfant</h3>
+                <p class="mb-3 text-muted">Bébés, Juniors, Jouets et Confort</p>
+                <span class="btn btn-outline-primary mt-auto d-inline-flex align-items-center gap-2">
+                    Collection
+                    <img src="{% static 'images/acc4.jpg' %}" width="18" height="18" alt="arrow" class="btn-icon">
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+
+---
+
+<section class="container section-spacing py-5">
+    <div class="promo-banner d-flex flex-column flex-md-row align-items-center justify-content-between py-5 px-5 rounded-4 shadow-lg promo-banner-bg">
+        <div class="flex-grow-1 text-center text-md-start">
+            <h2 class="h3 fw-bolder mb-2 text-gray-900">Le Complément Parfait : Nos Accessoires</h2>
+            <p class="lead mb-4 text-gray-700">Découvrez nos sacs, bijoux et montres avec <span class="badge bg-danger fs-4 fw-bold p-2 d-inline-block align-middle shadow">Jusqu'à -30%</span>.</p>
+            <a href="?category=Accessoires" class="btn btn-dark btn-lg d-inline-flex align-items-center gap-2 shadow">
+                <span>Découvrir les Accessoires</span>
+                <img src="{% static 'images/acc5.jpg' %}" width="24" height="24" alt="cta" class="btn-icon">
+            </a>
+        </div>
+        <div class="d-none d-md-block ms-5 flex-shrink-0">
+            <img src="{% static 'images/acc6.jpg' %}" width="180" height="140" alt="promo" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+---
+
+<section class="container section-spacing text-center">
+    <h2 class="section-title">Les Tendances du Moment</h2>
+    <div class="row g-4 justify-content-center">
+        {% for i in "1234" %}
+        <div class="col-6 col-md-3">
+            <div class="card h-100 shadow-sm border-0 product-card">
+                <img src="https://via.placeholder.com/300x400?text=Produit+{{ i }}" class="card-img-top" alt="Produit {{ i }}">
+                <div class="card-body d-flex flex-column text-start">
+                    <h3 class="h6 mb-1 text-truncate">T-shirt Design {{ i }}</h3>
+                    <div class="mb-2 text-primary fw-bold fs-5">29,99 €</div>
+                    <div class="d-flex gap-2 mt-auto">
+                        <button class="btn btn-primary btn-sm d-inline-flex align-items-center gap-1 flex-grow-1">
+                            <img src="{% static 'images/acc7.jpg' %}" width="18" height="18" alt="add" class="btn-icon">
+                            Panier
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center" title="Favoris">
+                            <img src="{% static 'images/acc8.jpg' %}" width="18" height="18" alt="fav" class="btn-icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+---
+
+<section class="container py-5 mt-5 mb-5 border-top border-bottom">
+    <div class="row g-4 justify-content-center text-center">
+        <div class="col-6 col-md-3">
+            <div class="avu-block p-2 h-100 d-flex flex-column align-items-center">
+                <img src="{% static 'images/acc1.jpg' %}" width="50" height="50" alt="service" class="img-fluid">
+                <h3 class="h6 mt-3 mb-1 fw-bold">Livraison Rapide</h3>
+                <span class="text-muted">Expédition sous 24h</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="avu-block p-2 h-100 d-flex flex-column align-items-center">
+                <img src="{% static 'images/acc2.jpg' %}" width="50" height="50" alt="guarantee" class="img-fluid">
+                <h3 class="h6 mt-3 mb-1 fw-bold">Retour Gratuit</h3>
+                <span class="text-muted">30 jours pour changer d'avis</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="avu-block p-2 h-100 d-flex flex-column align-items-center">
+                <img src="{% static 'images/acc3.jpg' %}" width="50" height="50" alt="quality" class="img-fluid">
+                <h3 class="h6 mt-3 mb-1 fw-bold">Qualité Garantie</h3>
+                <span class="text-muted">Matières durables</span>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="avu-block p-2 h-100 d-flex flex-column align-items-center">
+                <img src="{% static 'images/acc4.jpg' %}" width="50" height="50" alt="secure" class="img-fluid">
+                <h3 class="h6 mt-3 mb-1 fw-bold">Paiement Sécurisé</h3>
+                <span class="text-muted">Cryptage SSL 256 bits</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+---
+
+<section class="newsletter-section py-5 px-3 mb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <form class="d-flex flex-column flex-lg-row align-items-center gap-3 p-4 rounded-3 bg-white shadow newsletter-form">
+                    <h2 class="h5 mb-3 mb-lg-0 fw-bold flex-grow-1 text-center text-lg-start">Recevez nos nouveautés et offres exclusives</h2>
+                    <div class="input-group flex-grow-1">
+                        <span class="input-group-text bg-white border-end-0">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="3" fill="#6366f1"/><path d="M2 4l8 7 8-7" stroke="#fff" stroke-width="2" fill="none"/></svg>
+                        </span>
+                        <input type="email" class="form-control border-start-0" placeholder="Votre email" required>
+                        <button type="submit" class="btn btn-primary d-inline-flex align-items-center gap-1">
+                            S'inscrire
+                            <svg width="18" height="18" fill="none" stroke="white" stroke-width="2"><path d="M4 9h10M10 5l4 4-4 4"/></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

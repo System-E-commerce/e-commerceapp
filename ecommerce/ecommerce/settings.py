@@ -30,14 +30,19 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# ecommerce/settings.py
+
 INSTALLED_APPS = [
+    # Applications de base essentielles de Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "app",
+    # Local apps
+    'app',
+    'vendeur',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +126,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# End of settings
